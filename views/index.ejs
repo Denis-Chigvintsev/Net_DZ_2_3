@@ -9,6 +9,9 @@
     <h3>Список книг</h3>
     <% let ii=1 %> <% let id %>
     <ul>
+      <% if(books.length==0){ %>
+        <h5>В Вашей библиотеке сейчас нет книг!</h5>
+     <% } %>
       <% for (let book of books){%>
       <li class="book_list">
         <%=ii%>. Название книги: <%=book.title%> Автор: <%= book.authors%>
